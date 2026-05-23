@@ -63,6 +63,19 @@ Currently at **Droidor** building financial and e-commerce platforms for clients
 
 ---
 
+#### [laravel-multitenant-saas](https://github.com/Hafiz-M-Subhan/laravel-multitenant-saas)
+> Production-ready Laravel multi-tenant SaaS boilerplate
+
+- **Database-per-tenant isolation** via Spatie Multitenancy — subdomain resolves tenant, DB connection switches automatically
+- **Stripe billing** — Checkout sessions, plan switching with proration, webhook handling, cancel-at-period-end
+- **Async tenant provisioning** — `ProvisionTenant` job creates isolated DB, runs migrations, seeds roles, fires welcome event
+- **Feature gates with Redis cache** — `canUseFeature()` cached per tenant, invalidated on plan change
+- **Filament 3** superadmin — MRR widget, tenant suspend/reactivate, drag-to-reorder plans
+
+`Laravel 11` · `Spatie Multitenancy` · `Stripe` · `Redis` · `Filament 3` · `RBAC`
+
+---
+
 #### [clinic360](https://github.com/Hafiz-M-Subhan/clinic360)
 > Full-featured hospital & clinic management system
 
