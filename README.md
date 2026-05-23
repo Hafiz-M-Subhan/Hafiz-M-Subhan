@@ -76,14 +76,16 @@ Currently at **Droidor** building financial and e-commerce platforms for clients
 
 ---
 
-#### [clinic360](https://github.com/Hafiz-M-Subhan/clinic360)
+#### [clinic360](https://github.com/Hafiz-M-Subhan/hospitalMS)
 > Full-featured hospital & clinic management system
 
-- RBAC for Admin, Doctor, Receptionist — clean workflow separation
-- Laravel queues for automated billing reminders, report generation
-- Interactive analytics dashboard with real-time data
+- **RBAC** — variadic `CheckRole` middleware for Admin, Doctor, Receptionist with clean workflow separation
+- **Queue jobs** — automated appointment reminders, bill payment chasers, nightly analytics generation
+- **Redis-cached dashboard** — `GenerateDailyReport` job pre-computes all metrics at midnight; dashboard loads from cache, zero DB hits per page load
+- **Mail notifications** — `AppointmentReminder` and `BillPaymentDue` queued with exponential backoff (3 retries)
+- **Laravel scheduler** — cron-less: reminders at 08:00, bill chasers at 09:00, report regeneration at 00:00
 
-`Laravel 10` · `MySQL` · `RBAC` · `Livewire` · `Queues`
+`Laravel 10` · `MySQL` · `Redis` · `Livewire` · `Queues` · `RBAC`
 
 ---
 
