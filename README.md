@@ -83,12 +83,15 @@ Currently at **Droidor** building financial and e-commerce platforms for clients
 ### GitHub Stats
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Hafiz-M-Subhan&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true" height="165"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Hafiz-M-Subhan&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" height="165"/>
+  <img src="https://github-profile-trophy.vercel.app/?username=Hafiz-M-Subhan&theme=tokyonight&no-frame=true&no-bg=true&margin-w=8&column=4"/>
 </p>
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com/?user=Hafiz-M-Subhan&theme=tokyonight&hide_border=true"/>
+  <img src="https://streak-stats.demolab.com/?user=Hafiz-M-Subhan&theme=tokyonight&hide_border=true&date_format=j%20M%5B%20Y%5D"/>
+</p>
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=Hafiz-M-Subhan&theme=tokyo-night&hide_border=true&area=true"/>
 </p>
 
 ---
