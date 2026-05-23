@@ -74,6 +74,12 @@ Currently at **Droidor** building financial and e-commerce platforms for clients
 
 ---
 
+### Latest Article
+
+[![DEV.to Article](https://img.shields.io/badge/DEV.to-How_I_Built_a_Real--Time_Price_Feed_for_30k_Users_in_Laravel-0A0A0A?style=for-the-badge&logo=devdotto&logoColor=white)](https://dev.to/rana_subhan/how-i-built-a-real-time-precious-metals-price-feed-for-30000-concurrent-users-in-laravel-4gjg)
+
+---
+
 ### GitHub Stats
 
 <p align="center">
