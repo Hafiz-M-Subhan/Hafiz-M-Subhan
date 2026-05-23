@@ -37,16 +37,20 @@ Currently at **Droidor** building financial and e-commerce platforms for clients
 ### Featured Projects
 
 #### [laravel-precious-metals-platform](https://github.com/Hafiz-M-Subhan/laravel-precious-metals-platform)
-> High-traffic Laravel platform for live precious metals trading
+> High-traffic Laravel platform for live precious metals trading — XAU · XAG · XPT · XPD
 
-- **Laravel Reverb** broadcasting live XAU/XAG/XPT/XPD price ticks to 30,000+ concurrent WebSocket subscribers
-- **Redis** multi-TTL caching strategy (5s price cache, 60s candle cache) cutting DB load by ~95% under burst
-- **Event-driven order processing** — `ProcessOrder` job with `ShouldBeUnique`, atomic fill in DB transaction, 3-retry backoff
-- **DCA Savings Plan engine** — automated monthly/weekly gold buys with compound projection chart API
-- **Filament 3** admin panel with live-polled price table, order stats widget, savings plan management
-- **Docker Compose** stack: MySQL 8, Redis, ElasticSearch, Reverb, Horizon, price simulator
+- **Laravel Reverb** broadcasting live price ticks to 30,000+ concurrent WebSocket subscribers across public, private, and presence channels
+- **Redis** multi-TTL caching (5s prices, 60s candles, 3600s daily open, 30s admin stats) cutting DB load by ~95% under burst
+- **Event-driven order processing** — `ProcessOrder` job with `ShouldBeUnique`, atomic fill inside `DB::transaction()`, exponential backoff `[5s, 30s, 120s]`
+- **Portfolio P&L engine** — `PortfolioService` tracks weighted avg cost basis per asset, calculates unrealized and realized P&L live against Redis-cached spot prices
+- **Price alert engine** — `CheckPriceAlerts` job (everyMinute, `ShouldBeUnique` 55s lock) reads Redis price cache, fires `PriceAlertFired` event to user's private channel + mail notification
+- **DCA Savings Plan engine** — `ExecuteSavingsPlan` job unique per `plan_id+date`, monthly/biweekly/weekly with `addMonthNoOverflow()`, compound projection chart API
+- **ElasticSearch 8** full-text asset search — `symbol^3 / name^2` multi-field boost, fuzziness AUTO, currency term filter
+- **Laravel Horizon** — 4 named supervisors (`orders`, `savings-plans`, `notifications`, `default`) with per-queue process scaling
+- **Filament 3** admin — `MarketOverviewWidget` with `.poll('5s')`, `ActiveAlertsWidget` (30s refresh), `PriceAlertResource` (read-only audit log), `UserResource` with stats
+- **Laravel Sanctum** auth, ownership `Policies` (Order/SavingsPlan/PriceAlert), 6 `JsonResource` API resources, **Pest** unit + feature test suite
 
-`Laravel 11` · `Redis` · `WebSockets` · `ElasticSearch` · `Filament 3` · `Docker`
+`Laravel 11` · `Redis` · `WebSockets` · `ElasticSearch` · `Horizon` · `Filament 3` · `Pest` · `Docker`
 
 ---
 
