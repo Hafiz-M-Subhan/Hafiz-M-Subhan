@@ -76,7 +76,7 @@ Currently at **Droidor** building financial and e-commerce platforms for clients
 
 ---
 
-#### [clinic360](https://github.com/Hafiz-M-Subhan/hospitalMS)
+#### [clinic360](https://github.com/Hafiz-M-Subhan/clinic360)
 > Full-featured hospital & clinic management system
 
 - **RBAC** — variadic `CheckRole` middleware for Admin, Doctor, Receptionist with clean workflow separation
