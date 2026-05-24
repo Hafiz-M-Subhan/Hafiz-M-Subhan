@@ -12,7 +12,7 @@
 
 ### About Me
 
-Senior Backend Laravel Developer with 4+ years building production systems — multi-tenant SaaS platforms, live trading backends, e-commerce at scale, and AI-powered APIs. I care about the internals: query plans, queue architecture, broadcasting at 30k concurrent connections, and shipping code that holds under real load.
+Senior Backend Laravel Developer with 5+ years building production systems — multi-tenant SaaS platforms, live trading backends, e-commerce at scale, and AI-powered APIs. I care about the internals: query plans, queue architecture, broadcasting at 30k concurrent connections, and shipping code that holds under real load.
 
 Currently at **Droidor** building financial and e-commerce platforms for clients in Dubai, Lebanon, and Canada. Also the architect behind the **PSCA AI Chatbot** — a production AI system serving 110M+ citizens across Punjab, Pakistan.
 
