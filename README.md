@@ -70,6 +70,13 @@ Currently at **Droidor** building financial and e-commerce platforms for clients
 #### [laravel-multitenant-saas](https://github.com/Hafiz-M-Subhan/laravel-multitenant-saas)
 > Production-ready Laravel 12 multi-tenant SaaS boilerplate — database-per-tenant isolation, full RBAC, Stripe billing
 
+<img src="https://raw.githubusercontent.com/Hafiz-M-Subhan/laravel-multitenant-saas/main/screenshots/01-dashboard.png" width="100%" alt="Admin Dashboard"/>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Hafiz-M-Subhan/laravel-multitenant-saas/main/screenshots/02-tenants.png" width="49%" alt="Tenants"/>
+  <img src="https://raw.githubusercontent.com/Hafiz-M-Subhan/laravel-multitenant-saas/main/screenshots/05-users.png" width="49%" alt="Users"/>
+</p>
+
 - **Database-per-tenant isolation** via Spatie Multitenancy v4 — subdomain resolves tenant, DB connection switches automatically
 - **Stripe billing** — Checkout sessions, plan switching with proration, webhook handling, cancel-at-period-end
 - **Async tenant provisioning** — `ProvisionTenant` job (ShouldBeUnique) creates isolated DB, runs migrations, seeds roles, fires welcome event
