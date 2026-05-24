@@ -22,7 +22,7 @@ Currently at **Droidor** building financial and e-commerce platforms for clients
 
 | Layer | Tools |
 |---|---|
-| **Backend** | PHP 8.2, Laravel 11, Livewire, Sanctum, CodeIgniter |
+| **Backend** | PHP 8.3, Laravel 12, Livewire, Sanctum, CodeIgniter |
 | **Real-time** | Laravel Reverb, Laravel Echo, WebSockets, SSE Streaming |
 | **Queue / Cache** | Redis, Laravel Horizon, Queue Workers, Jobs |
 | **Search** | ElasticSearch, pgvector HNSW, PostgreSQL full-text |
@@ -68,15 +68,17 @@ Currently at **Droidor** building financial and e-commerce platforms for clients
 ---
 
 #### [laravel-multitenant-saas](https://github.com/Hafiz-M-Subhan/laravel-multitenant-saas)
-> Production-ready Laravel multi-tenant SaaS boilerplate
+> Production-ready Laravel 12 multi-tenant SaaS boilerplate — database-per-tenant isolation, full RBAC, Stripe billing
 
-- **Database-per-tenant isolation** via Spatie Multitenancy — subdomain resolves tenant, DB connection switches automatically
+- **Database-per-tenant isolation** via Spatie Multitenancy v4 — subdomain resolves tenant, DB connection switches automatically
 - **Stripe billing** — Checkout sessions, plan switching with proration, webhook handling, cancel-at-period-end
-- **Async tenant provisioning** — `ProvisionTenant` job creates isolated DB, runs migrations, seeds roles, fires welcome event
-- **Feature gates with Redis cache** — `canUseFeature()` cached per tenant, invalidated on plan change
-- **Filament 3** superadmin — MRR widget, tenant suspend/reactivate, drag-to-reorder plans
+- **Async tenant provisioning** — `ProvisionTenant` job (ShouldBeUnique) creates isolated DB, runs migrations, seeds roles, fires welcome event
+- **Feature gates** — Laravel Pennant flags with per-tenant overrides; `canUseFeature()` cached in Redis, invalidated on plan change
+- **Filament 3 superadmin** — 11 resources (Tenants, Subscriptions, Plans, Webhooks, Feature Flags, Users, Roles, Permissions, Activity Log, Social Accounts), MRR widget, tenant suspend/reactivate, drag-to-reorder plans
+- **Spatie RBAC** — 31 permissions, 6 platform roles (super-admin, billing-manager, support-agent, tenant-admin, tenant-member, readonly) seeded with demo users
+- **Custom admin UI** — hamburger sidebar toggle via `FilamentIcon::register()`, user name + role badge in topbar, branded login page
 
-`Laravel 11` · `Spatie Multitenancy` · `Stripe` · `Redis` · `Filament 3` · `RBAC`
+`Laravel 12` · `PHP 8.3` · `Spatie Multitenancy` · `Stripe` · `Redis` · `Filament 3` · `Pennant` · `RBAC`
 
 ---
 
